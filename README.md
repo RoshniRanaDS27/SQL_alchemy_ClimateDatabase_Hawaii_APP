@@ -66,21 +66,21 @@ To do so, used the Flask to create routes as follows:
 . Startted at the homepage.
 . Listed all the available routes.
 
-3. /api/v1.0/precipitation
+2. /api/v1.0/precipitation
    
 . Converted the query results from precipitation analysis (i.e. retrieve only the last 12 months of data) to a dictionary using date as the key and prcp as the value.
 . Returned the JSON representation of dictionary.
 
-5. /api/v1.0/stations
+3. /api/v1.0/stations
    
 . Returned a JSON list of stations from the dataset.
 
-7. /api/v1.0/tobs
+4. /api/v1.0/tobs
    
 . Query the dates and temperature observations of the most-active station for the previous year of data.
 . Returned a JSON list of temperature observations for the previous year.
 
-9. /api/v1.0/<start> and /api/v1.0/<start>/<end>
+5. /api/v1.0/<start> and /api/v1.0/<start>/<end>
 
 . Returned a JSON list of the minimum temperature, the average temperature, and the maximum temperature for a specified start or start-end range.
 . For a specified start, calculated TMIN, TAVG, and TMAX for all the dates greater than or equal to the start date.
