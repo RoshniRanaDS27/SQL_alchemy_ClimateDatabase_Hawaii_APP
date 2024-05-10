@@ -8,7 +8,6 @@ import numpy as np
 import datetime as dt
 import pandas as pd
 import matplotlib.pyplot as plt
-from flask import jsonify
 
 
 #################################################
@@ -67,11 +66,9 @@ def precipitation():
     # Convert the query results to a dictionary
     precipitation_dict = {date: prcp for date, prcp in precipitation_data}
 
-    # Add a title to the dictionary
-    title_dict = {"title": "Precipitation Data for the Last 12 Months"}
-
-    # Merge the title dictionary with the precipitation dictionary
-    result_dict = {**title_dict, **precipitation_dict}
+ # Add a title to the dictionary
+    title = "Precipitation Data for the Last 12 Months"
+    result_dict = {"title": title, "data": precipitation_dict}
 
     return jsonify(result_dict)
 
@@ -117,10 +114,23 @@ def start_date(start):
     temp_stats = session.query(func.min(Measurement.tobs), func.avg(Measurement.tobs), func.max(Measurement.tobs)).\
                  filter(Measurement.date >= start_date).all()
     
-    # Convert the query results to a list
-    temp_stats_lists = list(np.ravel(temp_stats))
+     # Convert the query results to a dictionary with titles
+    result_dict = {
+        "start_date": start_date.strftime('%Y-%m-%d'),
+        "end_date": end_date.strftime('%Y-%m-%d'),
+        "min_temperature": temp_stats[0][0],
+        "avg_temperature": temp_stats[0][1],
+        "max_temperature": temp_stats[0][2]
+    }
     
-    return jsonify(temp_stats_lists)
+    # Convert the query results to a list
+    temp_stats_lists = list(np.ravel(result_dict))
+
+     # Add a title to the response
+    title = "Temperature Statistics from Start Date"
+    response = {"title": title, "start_date": start, "temperature_statistics": temp_stats_lists}
+    
+    return jsonify(response)
 
 @app.route("/api/v1.0/<start>/<end>")
 def start_end_date(start, end):
@@ -134,8 +144,21 @@ def start_end_date(start, end):
                  filter(Measurement.date >= start_date).\
                  filter(Measurement.date <= end_date).all()
     
+     # Convert the query results to a dictionary with titles
+    result_dict = {
+        "start_date": start_date.strftime('%Y-%m-%d'),
+        "end_date": end_date.strftime('%Y-%m-%d'),
+        "min_temperature": temp_stats[0][0],
+        "avg_temperature": temp_stats[0][1],
+        "max_temperature": temp_stats[0][2]
+    }
+    
     # Convert the query results to a list
-    temp_stats_lists = list(np.ravel(temp_stats))
+    temp_stats_lists = list(np.ravel(result_dict))
+
+    # Add a title to the response
+    title = "Temperature Statistics from Start Date to End Date"
+    response = {"title": title, "start_date": start, "end_date": end, "temperature_statistics": temp_stats_lists}
     
     return jsonify(temp_stats_lists)
 
