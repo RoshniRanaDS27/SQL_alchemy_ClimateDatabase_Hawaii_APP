@@ -42,14 +42,12 @@ closed session at the end of the notebook.
 
 # Station Analysis
 1. Designed a query to calculate the total number of stations in the dataset.
-
 2. Designed a query to find the most-active stations (that is, the stations that have the most rows).
    To do so, completed the following steps:
 3. Listed the stations and observation counts in descending order.
 
-Answered the following question: which station id has the greatest number of observations?
+to Answer the following question: which station id has the greatest number of observations?
 Designed a query that calculates the lowest, highest, and average temperatures that filters on the most-active station id found in the previous query.
-
 
 1. Designed a query to get the previous 12 months of temperature observation (TOBS) data. To do so, complete the following steps:
 2. Filtered by the station that has the greatest number of observations.
@@ -64,44 +62,32 @@ have designed a Flask API based on the queries that was just developed.
 To do so, used the Flask to create routes as follows:
 
 1. /
-
-Startted at the homepage.
-Listed all the available routes.
+. Startted at the homepage.
+. Listed all the available routes.
 
 2. /api/v1.0/precipitation
-
-Converted the query results from precipitation analysis (i.e. retrieve only the last 12 months of data) to a dictionary using date as the key and prcp as the value.
-Returned the JSON representation of dictionary.
+. Converted the query results from precipitation analysis (i.e. retrieve only the last 12 months of data) to a dictionary using date as the key and prcp as the value.
+. Returned the JSON representation of dictionary.
 
 3. /api/v1.0/stations
-
-Returned a JSON list of stations from the dataset.
+. Returned a JSON list of stations from the dataset.
 
 4. /api/v1.0/tobs
-
-Query the dates and temperature observations of the most-active station for the previous year of data.
-Returned a JSON list of temperature observations for the previous year.
+. Query the dates and temperature observations of the most-active station for the previous year of data.
+. Returned a JSON list of temperature observations for the previous year.
 
 5. /api/v1.0/<start> and /api/v1.0/<start>/<end>
+. Returned a JSON list of the minimum temperature, the average temperature, and the maximum temperature for a specified start or start-end range.
+. For a specified start, calculated TMIN, TAVG, and TMAX for all the dates greater than or equal to the start date.
+. For a specified start date and end date, calculated TMIN, TAVG, and TMAX for the dates from the start date to the end date, inclusive.
 
-Returned a JSON list of the minimum temperature, the average temperature, and the maximum temperature for a specified start or start-end range.
-for a specified start, calculated TMIN, TAVG, and TMAX for all the dates greater than or equal to the start date.
+# Note 
+. Joinned the station and measurement tables for some of the queries.
+. Used the Flask jsonify function to convert API data to a valid JSON response object.
 
-For a specified start date and end date, calculated TMIN, TAVG, and TMAX for the dates from the start date to the end date, inclusive.
-
-#Note 
-Joinned the station and measurement tables for some of the queries.
-
-Used the Flask jsonify function to convert API data to a valid JSON response object.
-
-
-Repo Direction
-Created a new repository for this project called "sqlalchemy-challenge", Cloned the new repository(remote) to local by terminal.
-
-Inside my local Git repository, created a folder for "SurfsUp"
-
-Added Jupyter notebook "climate_starter.ipynb" and python script for app "app.py" to this folder. This is the main script to run this analysis.
-
-A Resources folder that contains the CSV files(Raw Data) and "hawaii.sqlite" i have used.
-
-Pushed these changes to GitHub profile by bash terminal.
+# Repo Direction
+. Created a new repository for this project called "sqlalchemy-challenge", Cloned the new repository(remote) to local by terminal.
+. Inside my local Git repository, created a folder for "SurfsUp"
+. Added Jupyter notebook "climate_starter.ipynb" and python script for app "app.py" to this folder. This is the main script to run this analysis.
+. A Resources folder that contains the CSV files(Raw Data) and "hawaii.sqlite" i have used.
+. Pushed these changes to GitHub profile by bash terminal.
