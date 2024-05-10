@@ -91,8 +91,8 @@ To do so, used the Flask to create routes as follows:
 . Used the Flask jsonify function to convert API data to a valid JSON response object.
 
 # Repo Direction
-. Created a new repository for this project called "sqlalchemy-challenge", Cloned the new repository(remote) to local by terminal.
-. Inside my local Git repository, created a folder for "SurfsUp"
-. Added Jupyter notebook "climate_starter.ipynb" and python script for app "app.py" to this folder. This is the main script to run this analysis.
-. A Resources folder that contains the CSV files(Raw Data) and "hawaii.sqlite" i have used.
-. Pushed these changes to GitHub profile by bash terminal.
+. Created a new repository for this project called "sqlalchemy-challenge", Cloned the new repository(remote) to local by terminal.   
+.    Inside my local Git repository, created a folder for "SurfsUp"   
+.    Added Jupyter notebook "climate_starter.ipynb" and python script for app "app.py" to this folder. This is the main script to run this analysis.
+.    A Resources folder that contains the CSV files(Raw Data) and "hawaii.sqlite" i have used.
+.    Pushed these changes to GitHub profile by bash terminal.
