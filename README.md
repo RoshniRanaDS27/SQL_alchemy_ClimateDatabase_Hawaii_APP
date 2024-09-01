@@ -1,13 +1,14 @@
 # Holiday vacation in Honolulu, Hawaii
-# Climate Database 
+# Climate Analysis API
 
 In this section, 
 Have used Python and SQLAlchemy to do a basic climate analysis and data exploration of climate database. 
 Specifically, have used SQLAlchemy ORM queries, Pandas, and Matplotlib.
 
-After completting the initial analysis, 
+This project is a Flask application designed to serve as an API for climate analysis data derived from a SQLite database. The API provides several endpoints that allow users to retrieve precipitation, station, and temperature data, as well as perform basic statistical analysis based on user-defined start and end dates. The data used in this project comes from the "hawaii.sqlite" database, which contains climate data for various weather stations in Hawaii.
+(After completting the initial analysis, 
 have designed a Flask API based on the queries that was just developed. 
-To do so, used the Flask to create routes. 
+To do so, used the Flask to create routes. )
 
 # Background
 A long holiday vacation in Honolulu, Hawaii. 
@@ -15,14 +16,77 @@ To help with trip planning, have decided to do a climate analysis about the area
 The following sections outline the steps that are considered to take to accomplish this task.
 Task was broken down into the following tasks:
 
-Part 1: Analyze and Explore the Climate Data
+## Prerequisites
+Before running the application, ensure that you have the following dependencies installed:
+
+- Python 3.x
+- Flask
+- SQLAlchemy
+- Pandas
+- Matplotlib
+- NumPy
+- You can install the necessary Python packages using pip:
+![image](https://github.com/user-attachments/assets/0798353c-4562-4567-86bf-c091e66ceaa4)
+
+# Project Structure
+
+- app.py: This is the main Flask application file where the API routes are defined.
+- Resources/hawaii.sqlite: This is the SQLite database containing climate data.
+- Resources/hawaii_stations.csv: This CSV file contains information about the weather stations.
+- Resources/hawaii_measurements.csv: This CSV file contains climate measurements data.
+
+Part 1: Analyze and Explore the Climate Data, Database Setup
 Part 2: Designning Climate App
 
-# Part 1: Analyze and Explore the Climate Data
+# Database Setup
+
+The application uses SQLAlchemy to connect to the SQLite database and map the database tables to Python classes. The database contains two primary tables:
+
+- Measurement: Stores climate measurement data, including dates, precipitation levels, and temperature observations.
+- Station: Stores information about the weather stations.
+- ![image](https://github.com/user-attachments/assets/cbc3a9b4-5c58-47d8-ac72-8f28e9225d0d)
+
+# Flask API Endpoints
+The Flask application provides the following API endpoints:
+
+1. Home Route (/)
+- Displays a list of all available API routes.
+
+2. Precipitation Data (/api/v1.0/precipitation)
+- Returns a JSON representation of the precipitation data for the last 12 months.
+
+3. Station Data (/api/v1.0/stations)
+- Returns a JSON list of all weather stations in the database.
+
+4. Temperature Observations (/api/v1.0/tobs)
+- Returns a JSON list of temperature observations for the most active station in the last 12 months.
+
+5. Temperature Statistics from Start Date (/api/v1.0/<start>)
+- Returns a JSON list of minimum, average, and maximum temperatures from a given start date.
+
+6. Temperature Statistics from Start to End Date (/api/v1.0/<start>/<end>)
+- Returns a JSON list of minimum, average, and maximum temperatures for a specified date range.
+
+# Running the Application
+To start the Flask application, execute the following command:
+![image](https://github.com/user-attachments/assets/4030e314-088a-4569-af96-56ed7d71445d)
+
+By default, the application will run on 'http://127.0.0.1:5000/' . You can use any web browser or tool like Postman to access the API routes.
+
+# Example Queries
+- Precipitation Data: http://127.0.0.1:5000/api/v1.0/precipitation
+- Station Data: http://127.0.0.1:5000/api/v1.0/stations
+- Temperature Observations: http://127.0.0.1:5000/api/v1.0/tobs
+- Temperature Stats from Start Date: http://127.0.0.1:5000/api/v1.0/2016-08-23
+- Temperature Stats from Start to End Date: http://127.0.0.1:5000/api/v1.0/2016-08-23/2017-08-23
+
+# Exploratory Data Analysis (EDA)
+The project also includes Python scripts for exploratory data analysis using Pandas and Matplotlib. The EDA scripts analyze precipitation and station data, calculating statistics such as the total number of stations, the most active stations, and temperature trends over time. These analyses help in understanding the data before creating the API.
+
+## Part 1: Analyze and Explore the Climate Data
 In this section, have used Python and SQLAlchemy to do a basic climate analysis and data exploration of climate database. 
 Specifically, used SQLAlchemy ORM queries, Pandas, and Matplotlib.     
 To do so, complete the following steps:
-
 
 Used the SQLAlchemy "create_engine()" function to connect to SQLite database.
 Used the SQLAlchemy "automap_base()" function to reflect tables into classes, and then saved references to the classes named station and measurement.
