@@ -1,4 +1,9 @@
 # Holiday vacation in Honolulu, Hawaii
+
+<img src="https://tse4.mm.bing.net/th?id=OIP.yhU9iq_ZXRAPvBauSwmUoQHaF1&pid=Api&P=0&h=180">
+<img src="https://media3.giphy.com/media/259eagOjDoMYBFi9ea/200.webp?cid=ecf05e47jjx0jiavyy5fmtzunwdom9s86hdddclj5v0sha7f&ep=v1_gifs_search&rid=200.webp&ct=g" alt="Your Alt Text" />
+<img src="https://www.picgifs.com/graphics/h/hawaii/graphics-hawaii-459700.gif" class="card-img-top" alt="Project 8">
+
 # Climate Analysis API
 
 In this section, 
@@ -10,11 +15,16 @@ This project is a Flask application designed to serve as an API for climate anal
 have designed a Flask API based on the queries that was just developed. 
 To do so, used the Flask to create routes. )
 
+<img src="https://media1.giphy.com/media/Lqhbb4m1q9kqLQg6x1/200.webp?cid=790b761193h9qltit87sm73b328i6fxfennmse6qnt0wdolp&ep=v1_gifs_search&rid=200.webp&ct=g" />
+
+
 # Background
 A long holiday vacation in Honolulu, Hawaii. 
 To help with trip planning, have decided to do a climate analysis about the area. 
 The following sections outline the steps that are considered to take to accomplish this task.
 Task was broken down into the following tasks:
+<img src="https://media4.giphy.com/media/xT5LMOGwuwYXqkIHRu/200.webp?cid=790b761130gsjjauqsrbhaeidr5ec8u7krfz3bilstl3g9lx&ep=v1_gifs_search&rid=200.webp&ct=g" alt="Your Alt Text" />
+
 
 ## Prerequisites
 Before running the application, ensure that you have the following dependencies installed:
@@ -30,6 +40,8 @@ Before running the application, ensure that you have the following dependencies 
 ![image](https://github.com/user-attachments/assets/0798353c-4562-4567-86bf-c091e66ceaa4)
 
 # Project Structure
+<img src="https://media1.giphy.com/media/bUYt141q6pN9TPQVym/giphy.webp?cid=ecf05e47f4qgk9od6i02qs1n10hufk3dyihojg66vbozf0v1&ep=v1_stickers_search&rid=giphy.webp&ct=s" class="card-img-top" alt="Project 8">
+
 
 - app.py: This is the main Flask application file where the API routes are defined.
 - Resources/hawaii.sqlite: This is the SQLite database containing climate data.
@@ -197,6 +209,9 @@ To receive all points:
 - A link to a GitHub repository was Added, cloned to the local machine and containing the files.
 - The command line was used to add files to the repository.
 - Appropriate commit messages were included in the files.
+
+<img src="https://media4.giphy.com/media/dlmHUk8yRAVQaBHqvb/giphy.webp?cid=ecf05e47lnsmchc42cynxx7r2ojwqohvju3fb8whwodeqb6z&ep=v1_stickers_search&rid=giphy.webp&ct=s" alt="Your Alt Text" />
+
 
 # Note 
 . Joinned the station and measurement tables for some of the queries.
