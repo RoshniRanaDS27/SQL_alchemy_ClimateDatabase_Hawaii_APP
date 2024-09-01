@@ -64,7 +64,7 @@ The Flask application provides the following API endpoints:
 5. Temperature Statistics from Start Date (/api/v1.0/<start>)
 - Returns a JSON list of minimum, average, and maximum temperatures from a given start date.
 
-6. Temperature Statistics from Start to End Date (/api/v1.0/<start>/<end>)
+6. Temperature Statistics from Start to End Date ('/api/v1.0/<start>/<end>')
 - Returns a JSON list of minimum, average, and maximum temperatures for a specified date range.
 
 # Running the Application
