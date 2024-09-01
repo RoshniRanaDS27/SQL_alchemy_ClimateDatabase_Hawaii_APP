@@ -33,6 +33,10 @@ Before running the application, ensure that you have the following dependencies 
 
 - app.py: This is the main Flask application file where the API routes are defined.
 - Resources/hawaii.sqlite: This is the SQLite database containing climate data.
+- ![image](https://github.com/user-attachments/assets/3e27fc1b-0971-41d5-a78e-17e45d5113e5)
+- ![image](https://github.com/user-attachments/assets/b9c3b410-9c00-4708-bd84-3528b6a22258)
+- ![image](https://github.com/user-attachments/assets/961babb5-15c5-4593-b6aa-e8556669c52b)
+   
 - Resources/hawaii_stations.csv: This CSV file contains information about the weather stations.
 - Resources/hawaii_measurements.csv: This CSV file contains climate measurements data.
 
