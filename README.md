@@ -18,6 +18,7 @@ Task was broken down into the following tasks:
 
 ## Prerequisites
 Before running the application, ensure that you have the following dependencies installed:
+![image](https://github.com/user-attachments/assets/f5c23032-e128-442d-94fa-66f97273679a)
 
 - Python 3.x
 - Flask
@@ -39,6 +40,7 @@ Part 1: Analyze and Explore the Climate Data, Database Setup
 Part 2: Designning Climate App
 
 # Database Setup
+![image](https://github.com/user-attachments/assets/88310284-6afa-4c6d-aa38-8c6552784724)
 
 The application uses SQLAlchemy to connect to the SQLite database and map the database tables to Python classes. The database contains two primary tables:
 
@@ -48,7 +50,9 @@ The application uses SQLAlchemy to connect to the SQLite database and map the da
 
 # Flask API Endpoints (Design of Climate App)
 The Flask application provides the following API endpoints:
-
+![image](https://github.com/user-attachments/assets/5ee0d653-553d-46ec-a651-c2f1c2ad829d)
+![image](https://github.com/user-attachments/assets/772f884c-e926-48ae-947c-9d0173936530)
+   
 1. Home Route (/)
 - Displays a list of all available API routes.
 
@@ -57,16 +61,24 @@ The Flask application provides the following API endpoints:
 
 3. Station Data (/api/v1.0/stations)
 - Returns a JSON list of all weather stations in the database.
+![image](https://github.com/user-attachments/assets/1a62c622-ba3f-486d-b643-26fccd9699ff)
+
 
 4. Temperature Observations (/api/v1.0/tobs)
 - Returns a JSON list of temperature observations for the most active station in the last 12 months.
+![image](https://github.com/user-attachments/assets/c3da320b-35b7-4158-b650-df4719db422a)
 
 5. /api/v1.0/<start> ( Temperature Statistics from Start Date)
 - Returns a JSON list of minimum, average, and maximum temperatures from a given start date.
+![image](https://github.com/user-attachments/assets/1e93df5e-0e99-40c3-8422-44cf174aae7f)
+
 
 6. /api/v1.0/<start>/<end> (Temperature Statistics from Start to End Date)
 - Returns a JSON list of minimum, average, and maximum temperatures for a specified date range.
-
+![image](https://github.com/user-attachments/assets/4061bb50-ea46-43d7-adea-3a7ce6601970)
+![image](https://github.com/user-attachments/assets/7f868eb7-66cb-45cc-bd9d-d654b7d5e9d2)
+   
+   
 # Running the Application
 To start the Flask application, execute the following command:
 ![image](https://github.com/user-attachments/assets/4030e314-088a-4569-af96-56ed7d71445d)
@@ -96,7 +108,7 @@ closed session at the end of the notebook.
 
 # Requirements
 
-1. Jupyter Notebook Database Connection
+### 1. Jupyter Notebook Database Connection
 To receive all points, the following were completed:
 
 - The SQLAlchemy create_engine() function was used to connect to the SQLite database.
@@ -105,9 +117,13 @@ To receive all points, the following were completed:
 - Python was linked to the database by creating a SQLAlchemy session.
 - The session was closed at the end of the notebook.
 
-2. Precipitation Analysis
+### 2. Precipitation Analysis
 To receive all points, the following were completed:
 
+![image](https://github.com/user-attachments/assets/8b137c94-ea3d-43c4-bcbc-7de109873f94)
+![image](https://github.com/user-attachments/assets/b65884d0-19b8-46f2-910c-9df420433932)
+![image](https://github.com/user-attachments/assets/3d559be7-af5b-444f-8d48-bcde1198bd1f)
+   
 - A query was created to find the most recent date in the dataset (8/23/2017).
 - A query was created to collect only the date and precipitation for the last year of data without passing the date as a variable.
 - The query results were saved to a Pandas DataFrame to create date and precipitation columns.
@@ -115,9 +131,15 @@ To receive all points, the following were completed:
 - The results were plotted using the DataFrame plot method with date as the x and precipitation as the y variables.
 - Pandas was used to print the summary statistics for the precipitation data.
 
-3. Station Analysis
+### 3. Station Analysis
 To receive all points, the following were completed:
 
+![image](https://github.com/user-attachments/assets/6fbba21b-82f4-4ef3-9901-3c6b7f988f58)
+![image](https://github.com/user-attachments/assets/f4aa3499-eb24-4a39-8bea-2c260843570a)
+![image](https://github.com/user-attachments/assets/ffc35c1b-60bb-46f5-a8a4-6e19a4c8cb3d)
+
+![image](https://github.com/user-attachments/assets/fc79a441-9eb4-49ec-a153-119d4e9534f9)
+   
 - A query was designed to correctly find the number of stations in the dataset (9).
 - A query was designed to correctly list the stations and observation counts in descending order and identify the most active station (USC00519281).
 - A query was designed to find the min, max, and average temperatures for the most active station (USC00519281).
@@ -125,7 +147,7 @@ To receive all points, the following were completed:
 - The query results were saved to a Pandas DataFrame.
 - A histogram was correctly plotted with bins=12 for the last year of data using tobs as the column to count.
 
-4. API SQLite Connection & Landing Page
+### 4. API SQLite Connection & Landing Page
 To receive all points, the Flask application included the following:
 
 - The engine was correctly generated to the correct SQLite file.
@@ -134,7 +156,7 @@ To receive all points, the Flask application included the following:
 - The session was correctly created and bound between the Python app and the database.
 - The available routes were displayed on the landing page.
 
-5.  API Static Routes
+### 5.  API Static Routes
 To receive all points, the Flask application included the following routes:
 
 - Precipitation route:
@@ -146,7 +168,7 @@ To receive all points, the Flask application included the following routes:
    - Returned JSONified data for the most active station (USC00519281).
    - Only returned the JSONified data for the last year of data.
 
-6. API Dynamic Routes
+### 6. API Dynamic Routes
 To receive all points, the Flask application included the following dynamic routes:
 
 - Start route:
@@ -157,7 +179,7 @@ To receive all points, the Flask application included the following dynamic rout
     - Accepted the start and end dates as parameters from the URL.
     - Returned the min, max, and average temperatures calculated from the given start date to the given end date.
 
-7. Coding Conventions and Formatting
+### 7. Coding Conventions and Formatting
 To receive all points, the code:
 
 - Placed imports at the top of the file, just after any module comments and docstrings, and before module globals and constants.
@@ -165,7 +187,7 @@ To receive all points, the code:
 - Followed DRY (Don't Repeat Yourself) principles, creating maintainable and reusable code.
 - Used concise logic and creative engineering where possible.
 
-8. Deployment
+### 8. Deployment
 To receive all points:
 
 - A link to a GitHub repository was Added, cloned to the local machine and containing the files.
