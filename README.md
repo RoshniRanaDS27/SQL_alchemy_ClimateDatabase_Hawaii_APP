@@ -46,7 +46,7 @@ The application uses SQLAlchemy to connect to the SQLite database and map the da
 - Station: Stores information about the weather stations.
 - ![image](https://github.com/user-attachments/assets/cbc3a9b4-5c58-47d8-ac72-8f28e9225d0d)
 
-# Flask API Endpoints
+# Flask API Endpoints (Design of Climate App)
 The Flask application provides the following API endpoints:
 
 1. Home Route (/)
@@ -94,61 +94,83 @@ Used the SQLAlchemy "automap_base()" function to reflect tables into classes, an
 Linked Python to the database by creating a SQLAlchemy session.
 closed session at the end of the notebook.
 
-# Performed a precipitation analysis and then a station analysis by completing the steps in the following two subsections.
+# Requirements
 
-# Precipitation Analysis
-1. Found the most recent date in the dataset.
-2. By Using that date, got the previous 12 months of precipitation data by querying the previous 12 months of data.
-3. Loaded the query results into a Pandas DataFrame. Explicitly set the column names.
-4. Sorted the DataFrame values by "date".
-5. Plotted the results by using the DataFrame plot method.
-6. Used Pandas to print the summary statistics for the precipitation data.
+1. Jupyter Notebook Database Connection
+To receive all points, the following were completed:
 
-# Station Analysis
-1. Designed a query to calculate the total number of stations in the dataset.
-2. Designed a query to find the most-active stations (that is, the stations that have the most rows).
-   To do so, completed the following steps:
-3. Listed the stations and observation counts in descending order.
+- The SQLAlchemy create_engine() function was used to connect to the SQLite database.
+- The SQLAlchemy automap_base() function was used to reflect the tables into classes.
+- References were saved to the classes named station and measurement.
+- Python was linked to the database by creating a SQLAlchemy session.
+- The session was closed at the end of the notebook.
 
-to Answer the following question: which station id has the greatest number of observations?
-Designed a query that calculates the lowest, highest, and average temperatures that filters on the most-active station id found in the previous query.
+2. Precipitation Analysis
+To receive all points, the following were completed:
 
-1. Designed a query to get the previous 12 months of temperature observation (TOBS) data. To do so, complete the following steps:
-2. Filtered by the station that has the greatest number of observations.
-3. Query the previous 12 months of TOBS data for that station.
-4. Plotted the results as a histogram with bins=12, as the following image shows:
-5. depictted the histogram.
-6. Closed your session.
+- A query was created to find the most recent date in the dataset (8/23/2017).
+- A query was created to collect only the date and precipitation for the last year of data without passing the date as a variable.
+- The query results were saved to a Pandas DataFrame to create date and precipitation columns.
+- The DataFrame was sorted by date.
+- The results were plotted using the DataFrame plot method with date as the x and precipitation as the y variables.
+- Pandas was used to print the summary statistics for the precipitation data.
 
-# Part 2: Design of Climate App
-After completting the initial analysis, 
-have designed a Flask API based on the queries that was just developed. 
-To do so, used the Flask to create routes as follows:
+3. Station Analysis
+To receive all points, the following were completed:
 
-1. /
-   
-. Startted at the homepage.
-. Listed all the available routes.
+- A query was designed to correctly find the number of stations in the dataset (9).
+- A query was designed to correctly list the stations and observation counts in descending order and identify the most active station (USC00519281).
+- A query was designed to find the min, max, and average temperatures for the most active station (USC00519281).
+- A query was created to get the previous 12 months of temperature observation (TOBS) data filtered by the station that had the greatest number of observations.
+- The query results were saved to a Pandas DataFrame.
+- A histogram was correctly plotted with bins=12 for the last year of data using tobs as the column to count.
 
-2. /api/v1.0/precipitation
-   
-. Converted the query results from precipitation analysis (i.e. retrieve only the last 12 months of data) to a dictionary using date as the key and prcp as the value.
-. Returned the JSON representation of dictionary.
+4. API SQLite Connection & Landing Page
+To receive all points, the Flask application included the following:
 
-3. /api/v1.0/stations
-   
-. Returned a JSON list of stations from the dataset.
+- The engine was correctly generated to the correct SQLite file.
+- automap_base() was used to reflect the database schema.
+- References were correctly saved to the tables in the SQLite file (measurement and station).
+- The session was correctly created and bound between the Python app and the database.
+- The available routes were displayed on the landing page.
 
-4. /api/v1.0/tobs
-   
-. Query the dates and temperature observations of the most-active station for the previous year of data.
-. Returned a JSON list of temperature observations for the previous year.
+5.  API Static Routes
+To receive all points, the Flask application included the following routes:
 
-5. /api/v1.0/<start> and /api/v1.0/<start>/<end>
+- Precipitation route:
+   - Returned JSON with the date as the key and the value as the precipitation.
+   - Only returned the JSONified precipitation data for the last year in the database.
+- Stations route:
+   - Returned JSONified data of all of the stations in the database.
+- TOBS route:
+   - Returned JSONified data for the most active station (USC00519281).
+   - Only returned the JSONified data for the last year of data.
 
-. Returned a JSON list of the minimum temperature, the average temperature, and the maximum temperature for a specified start or start-end range.
-. For a specified start, calculated TMIN, TAVG, and TMAX for all the dates greater than or equal to the start date.
-. For a specified start date and end date, calculated TMIN, TAVG, and TMAX for the dates from the start date to the end date, inclusive.
+6. API Dynamic Routes
+To receive all points, the Flask application included the following dynamic routes:
+
+- Start route:
+   - Accepted the start date as a parameter from the URL.
+   - Returned the min, max, and average temperatures calculated from the given start date to the end of the dataset.
+
+- Start/end route:
+    - Accepted the start and end dates as parameters from the URL.
+    - Returned the min, max, and average temperatures calculated from the given start date to the given end date.
+
+7. Coding Conventions and Formatting
+To receive all points, the code:
+
+- Placed imports at the top of the file, just after any module comments and docstrings, and before module globals and constants.
+- Named functions and variables with lowercase characters, with words separated by underscores.
+- Followed DRY (Don't Repeat Yourself) principles, creating maintainable and reusable code.
+- Used concise logic and creative engineering where possible.
+
+8. Deployment
+To receive all points:
+
+- A link to a GitHub repository was Added, cloned to the local machine and containing the files.
+- The command line was used to add files to the repository.
+- Appropriate commit messages were included in the files.
 
 # Note 
 . Joinned the station and measurement tables for some of the queries.
