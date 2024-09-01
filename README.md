@@ -22,7 +22,7 @@ To do so, used the Flask to create routes. )
 A long holiday vacation in Honolulu, Hawaii. 
 To help with trip planning, have decided to do a climate analysis about the area. 
 The following sections outline the steps that are considered to take to accomplish this task.
-Task was broken down into the following tasks:
+Task was broken down into the following tasks:   
 <img src="https://media4.giphy.com/media/xT5LMOGwuwYXqkIHRu/200.webp?cid=790b761130gsjjauqsrbhaeidr5ec8u7krfz3bilstl3g9lx&ep=v1_gifs_search&rid=200.webp&ct=g" alt="Your Alt Text" />
 
 
