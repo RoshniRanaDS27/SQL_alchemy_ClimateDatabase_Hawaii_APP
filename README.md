@@ -1,7 +1,7 @@
 # Holiday vacation in Honolulu, Hawaii
 
 <img src="https://tse4.mm.bing.net/th?id=OIP.yhU9iq_ZXRAPvBauSwmUoQHaF1&pid=Api&P=0&h=180">
-<img src="https://media3.giphy.com/media/259eagOjDoMYBFi9ea/200.webp?cid=ecf05e47jjx0jiavyy5fmtzunwdom9s86hdddclj5v0sha7f&ep=v1_gifs_search&rid=200.webp&ct=g" alt="Your Alt Text" />
+<img src="https://media.giphy.com/media/1010JI2Hs0Yt8Y/giphy.gif" alt="Your Alt Text" />
 <img src="https://www.picgifs.com/graphics/h/hawaii/graphics-hawaii-459700.gif" class="card-img-top" alt="Project 8">
 
 # Climate Analysis API
