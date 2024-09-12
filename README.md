@@ -4,7 +4,7 @@
 <img src="https://media.giphy.com/media/1010JI2Hs0Yt8Y/giphy.gif" alt="Your Alt Text" />
 <img src="https://www.picgifs.com/graphics/h/hawaii/graphics-hawaii-459700.gif" class="card-img-top" alt="Project 8">
 
-# Climate Analysis API
+# Climate Analysis API 
 
 In this section, 
 Have used Python and SQLAlchemy to do a basic climate analysis and data exploration of climate database. 
